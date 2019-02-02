@@ -67,7 +67,7 @@
                  <?php echo date('h:i A' ,$time) ?? '' ;?></h6>
               </li>
               <li class="page-item mx-sm-2">
-                 <a href="<?php echo url_for('/public/logout.php');?>" 
+                 <a href="<?php echo url_for('/logout.php');?>" 
                  class="text-danger">Logout</a>
               </li>
          <?php }?>

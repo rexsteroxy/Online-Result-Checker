@@ -96,8 +96,10 @@ $semester_s = $_POST['semester'] ?? "";
   <form  class="form-group" action="grade.php" method="POST">
   
   <span>Grade Point : </span>
-  <input class="form-control mb-sm-3" value="<?php echo h(number_format($mgp, 2)) ; ?>" name="gp">
-  
+  <select name="gp" type="text" class="btn btn-outline-success mt-sm-2" 
+  value="<?php $mgp ; ?>">
+  <option><?php echo h(number_format($mgp, 2)) ; ?></option>
+  </select></br>
   <select name="semester" type="text" class="btn btn-outline-success mt-sm-2">
                       <option><?php echo $semester_s ; ?></option>
   </select></br></br>
@@ -152,7 +154,8 @@ Previous Page</a></h5>
  //looping through the array data($courses) so that i can echo it in this form
  foreach($p_courses as $p_course){?>
     <label><?php echo h($p_course).":" ;?></label>
-    <input name="score[]" type="number" min="0" max="100" placeholder="score"class="btn btn-outline-success mt-sm-2">
+    <input name="score[]" type="number" min="0" max="100" placeholder="score"
+    required class="btn btn-outline-success mt-sm-2">
    
     <labe><?php echo"Course Unit:" ;?></label>
     <input name="unit[]" type="number" required min="1" max="40" placeholder="unit"class="btn btn-outline-primary "></br></br>
