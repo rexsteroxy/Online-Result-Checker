@@ -1,0 +1,14 @@
+1. On public/admin/student/show_students.php.
+On line 8.../handle the error message that will pop if the user types  in 
+the url id by him or herself especially the id  that is not in the database.
+
+2.   On public/admin/result/f1-s4/view_result.php.
+/handle the error message that will pop if the user types  in 
+the url id by him or herself especially the id  that is not in the database.
+
+3. on public/profile.
+Handle the error on Cumulative Gp which normally comes up
+ if the students has no set gp in the database....
+ THE NAN ERROR(ZERO RESULT ERROR);            
+
+4. fix session messages of delete and edit on Student and admin class.
