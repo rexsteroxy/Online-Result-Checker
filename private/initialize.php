@@ -49,7 +49,7 @@ define("SHARED_PATH",PRIVATE_PATH . '/shared');
 
   //creating database connection
 $database=db_connect();
-DatabaseObject::set_database($database);
+databaseObject::set_database($database);
 $session = new Session;
 
 ?>

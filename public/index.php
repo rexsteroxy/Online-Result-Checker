@@ -1,5 +1,5 @@
 <?php 
-//redirecting to the index page
+//redirecting to the login page
 
 header('location:' . 'login.php');
 
