@@ -50,6 +50,6 @@ define("SHARED_PATH",PRIVATE_PATH . '/shared');
   //creating database connection
 $database=db_connect();
 databaseObject::set_database($database);
-$session = new Session;
+$session = new session;
 
 ?>
