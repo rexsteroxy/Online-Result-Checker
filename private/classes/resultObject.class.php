@@ -2,6 +2,7 @@
 class ResultObject extends databaseObject{
 
 static public $table_name = "";
+static public $detail_column = "";
 static protected $db_column = ['id','matnumber', 'course1', 'score1',  'unit1',
     'grade1','course2', 'score2',  'unit2','grade2',
     'course3', 'score3',  'unit3','grade3',
@@ -104,28 +105,143 @@ static public function find_by_matnumber($matnumber){
     }
   
   }
-public  function update(){
-    $this->validate();
-    if(!empty($this->errors)){return false ;}
-    $attributes = $this->sanitized_attributes();
-    $attribute_pairs = [];
-    foreach($attributes as $key => $value){
-        $attribute_pairs[] = "{$key}='{$value}'";
-    }
+static public function insert_matnumber($courses){
+    $sql = "INSERT INTO " . static::$table_name ." ";
+    $sql .= "(matnumber)";
+    $sql .= "VALUE (";
+    $sql .= "'" . self::$database->escape_string($courses['matnumber']) . "'";
+    $sql .= ")";
+
+    $result = self::$database->query($sql);
+    return $result;
+}
+static public function edit_course($d_courses,$matnumber){
+    
     $sql = "UPDATE ". static::$table_name ." SET ";
-    $sql .= join(', ', $attribute_pairs);
-    $sql .= " WHERE matnumber='" . self::$database->escape_string($this->matnumber) . "' ";
+    $sql .= "course1='" . self::$database->escape_string($d_courses[0]). "',";
+    $sql .= "course2='" . self::$database->escape_string($d_courses[1]). "',";
+    $sql .= "course3='" . self::$database->escape_string($d_courses[2]). "',";
+    $sql .= "course4='" . self::$database->escape_string($d_courses[3]). "',";
+    $sql .= "course5='" . self::$database->escape_string($d_courses[4]). "',";
+    $sql .= "course6='" . self::$database->escape_string($d_courses[5]). "',";
+    $sql .= "course7='" . self::$database->escape_string($d_courses[6]). "',";
+    $sql .= "course8='" . self::$database->escape_string($d_courses[7]). "',";
+    $sql .= "course9='" . self::$database->escape_string($d_courses[8]). "',";
+    $sql .= "course10='" . self::$database->escape_string($d_courses[9]). "',";
+    $sql .= "course11='" . self::$database->escape_string($d_courses[10]). "',";
+    $sql .= "course12='" . self::$database->escape_string($d_courses[11]). "',";
+    $sql .= "course13='" . self::$database->escape_string($d_courses[12]). "',";
+    $sql .= "course14='" . self::$database->escape_string($d_courses[13]). "',";
+    $sql .= "course15='" . self::$database->escape_string($d_courses[14]). "',";
+    $sql .= "course16='" . self::$database->escape_string($d_courses[15]). "',";
+    $sql .= "course17='" . self::$database->escape_string($d_courses[16]). "',";
+    $sql .= "course18='" . self::$database->escape_string($d_courses[17]). "',";
+    $sql .= "course19='" . self::$database->escape_string($d_courses[18]). "',";
+    $sql .= "course20='" . self::$database->escape_string($d_courses[19]). "'";
+    $sql .= " WHERE matnumber='" . self::$database->escape_string($matnumber) . "' ";
     $sql .= "LIMIT 1";
     $result = self::$database->query($sql);
     return $result;
 
 }
-public function save(){
-    if(isset($this->matnumber)){
-        return $this->update();
-    }else{
-        return $this->create();
-    }
+static public function edit_score($d_score,$matnumber){
+    
+    $sql = "UPDATE ". static::$table_name ." SET ";
+    $sql .= "score1='" . self::$database->escape_string($d_score[0]). "',";
+    $sql .= "score2='" . self::$database->escape_string($d_score[1]). "',";
+    $sql .= "score3='" . self::$database->escape_string($d_score[2]). "',";
+    $sql .= "score4='" . self::$database->escape_string($d_score[3]). "',";
+    $sql .= "score5='" . self::$database->escape_string($d_score[4]). "',";
+    $sql .= "score6='" . self::$database->escape_string($d_score[5]). "',";
+    $sql .= "score7='" . self::$database->escape_string($d_score[6]). "',";
+    $sql .= "score8='" . self::$database->escape_string($d_score[7]). "',";
+    $sql .= "score9='" . self::$database->escape_string($d_score[8]). "',";
+    $sql .= "score10='" . self::$database->escape_string($d_score[9]). "',";
+    $sql .= "score11='" . self::$database->escape_string($d_score[10]). "',";
+    $sql .= "score12='" . self::$database->escape_string($d_score[11]). "',";
+    $sql .= "score13='" . self::$database->escape_string($d_score[12]). "',";
+    $sql .= "score14='" . self::$database->escape_string($d_score[13]). "',";
+    $sql .= "score15='" . self::$database->escape_string($d_score[14]). "',";
+    $sql .= "score16='" . self::$database->escape_string($d_score[15]). "',";
+    $sql .= "score17='" . self::$database->escape_string($d_score[16]). "',";
+    $sql .= "score18='" . self::$database->escape_string($d_score[17]). "',";
+    $sql .= "score19='" . self::$database->escape_string($d_score[18]). "',";
+    $sql .= "score20='" . self::$database->escape_string($d_score[19]). "'";
+    $sql .= " WHERE matnumber='" . self::$database->escape_string($matnumber) . "' ";
+    $sql .= "LIMIT 1";
+    $result = self::$database->query($sql);
+    return $result;
+
+}
+
+static public function edit_unit($d_unit,$matnumber){
+    
+    $sql = "UPDATE ". static::$table_name ." SET ";
+    $sql .= "unit1='" . self::$database->escape_string($d_unit[0]). "',";
+    $sql .= "unit2='" . self::$database->escape_string($d_unit[1]). "',";
+    $sql .= "unit3='" . self::$database->escape_string($d_unit[2]). "',";
+    $sql .= "unit4='" . self::$database->escape_string($d_unit[3]). "',";
+    $sql .= "unit5='" . self::$database->escape_string($d_unit[4]). "',";
+    $sql .= "unit6='" . self::$database->escape_string($d_unit[5]). "',";
+    $sql .= "unit7='" . self::$database->escape_string($d_unit[6]). "',";
+    $sql .= "unit8='" . self::$database->escape_string($d_unit[7]). "',";
+    $sql .= "unit9='" . self::$database->escape_string($d_unit[8]). "',";
+    $sql .= "unit10='" . self::$database->escape_string($d_unit[9]). "',";
+    $sql .= "unit11='" . self::$database->escape_string($d_unit[10]). "',";
+    $sql .= "unit12='" . self::$database->escape_string($d_unit[11]). "',";
+    $sql .= "unit13='" . self::$database->escape_string($d_unit[12]). "',";
+    $sql .= "unit14='" . self::$database->escape_string($d_unit[13]). "',";
+    $sql .= "unit15='" . self::$database->escape_string($d_unit[14]). "',";
+    $sql .= "unit16='" . self::$database->escape_string($d_unit[15]). "',";
+    $sql .= "unit17='" . self::$database->escape_string($d_unit[16]). "',";
+    $sql .= "unit18='" . self::$database->escape_string($d_unit[17]). "',";
+    $sql .= "unit19='" . self::$database->escape_string($d_unit[18]). "',";
+    $sql .= "unit20='" . self::$database->escape_string($d_unit[19]). "'";
+    $sql .= " WHERE matnumber='" . self::$database->escape_string($matnumber) . "' ";
+    $sql .= "LIMIT 1";
+    $result = self::$database->query($sql);
+    return $result;
+
+}
+
+static public function edit_grade($d_grade,$matnumber){
+    
+    $sql = "UPDATE ". static::$table_name ." SET ";
+    $sql .= "grade1='" . self::$database->escape_string($d_grade[0]). "',";
+    $sql .= "grade2='" . self::$database->escape_string($d_grade[1]). "',";
+    $sql .= "grade3='" . self::$database->escape_string($d_grade[2]). "',";
+    $sql .= "grade4='" . self::$database->escape_string($d_grade[3]). "',";
+    $sql .= "grade5='" . self::$database->escape_string($d_grade[4]). "',";
+    $sql .= "grade6='" . self::$database->escape_string($d_grade[5]). "',";
+    $sql .= "grade7='" . self::$database->escape_string($d_grade[6]). "',";
+    $sql .= "grade8='" . self::$database->escape_string($d_grade[7]). "',";
+    $sql .= "grade9='" . self::$database->escape_string($d_grade[8]). "',";
+    $sql .= "grade10='" . self::$database->escape_string($d_grade[9]). "',";
+    $sql .= "grade11='" . self::$database->escape_string($d_grade[10]). "',";
+    $sql .= "grade12='" . self::$database->escape_string($d_grade[11]). "',";
+    $sql .= "grade13='" . self::$database->escape_string($d_grade[12]). "',";
+    $sql .= "grade14='" . self::$database->escape_string($d_grade[13]). "',";
+    $sql .= "grade15='" . self::$database->escape_string($d_grade[14]). "',";
+    $sql .= "grade16='" . self::$database->escape_string($d_grade[15]). "',";
+    $sql .= "grade17='" . self::$database->escape_string($d_grade[16]). "',";
+    $sql .= "grade18='" . self::$database->escape_string($d_grade[17]). "',";
+    $sql .= "grade19='" . self::$database->escape_string($d_grade[18]). "',";
+    $sql .= "grade20='" . self::$database->escape_string($d_grade[19]). "'";
+    $sql .= " WHERE matnumber='" . self::$database->escape_string($matnumber) . "' ";
+    $sql .= "LIMIT 1";
+    $result = self::$database->query($sql);
+    return $result;
+
+}
+static public function edit_gp($details,$matnumber){
+    $sql = "UPDATE ". static::$table_name ." SET ";
+    $sql .= static::$detail_column ="'" . 
+    self::$database->escape_string($details['gp']). "' ";
+    $sql .= " WHERE matnumber='" . self::$database->escape_string($matnumber) . "' ";
+    $sql .= "LIMIT 1";
+    $result = self::$database->query($sql);
+    return $result;
+
 }
 }
 ?>

@@ -12,7 +12,7 @@ if(isset($_POST['enter'])){
 <?php $number=$_POST['number'] ?? " ";?>
 <?php if($number<=20 AND $number>=0 ) { ?>
   <div class="container-fluid">
-<h5><a class="text-danger" href="<?php echo url_for('stageone.php')?>">
+<h5><a class="text-danger" href="<?php echo url_for('/admin/upload/stageone.php')?>">
 Previous Page</a></h5>
 </div>
 <div class="container-fluid">

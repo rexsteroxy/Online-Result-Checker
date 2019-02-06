@@ -1,7 +1,6 @@
 <?php 
 require_once("../../../private/initialize.php");
 require_admin_login();
-
 ?>
 <?php 
 //This is for inserting the caluculated GP result into the database
@@ -97,7 +96,7 @@ $semester_s = $_POST['semester'] ?? "";
   
   <span>Grade Point : </span>
   <select name="gp" type="text" class="btn btn-outline-success mt-sm-2" 
-  value="<?php $mgp ; ?>">
+  value="<?php h(number_format($mgp, 2)) ; ?>">
   <option><?php echo h(number_format($mgp, 2)) ; ?></option>
   </select></br>
   <select name="semester" type="text" class="btn btn-outline-success mt-sm-2">
@@ -130,7 +129,7 @@ if(isset($_POST['register'])){
 <?php $page_title="Enter Result details"?>
 <?php include(SHARED_PATH . '/admin_header.php');?>
 <div class="container-fluid">
-<h5><a class="text-danger" href="<?php echo url_for('stageone.php')?>">
+<h5><a class="text-danger" href="<?php echo url_for('/admin/upload/stageone.php')?>">
 Previous Page</a></h5>
 </div>
 
