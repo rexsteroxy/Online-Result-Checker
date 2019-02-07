@@ -19,19 +19,7 @@ if (!isset($page_title)){$page_title="admin_homepage";}
 
   <body>
     <!-- The header stars here -->
-    <header id="header" id="home">
-        <div class="header-top bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-sm-6 col-8 header-top-right no-padding">
-                    <a href="tel:+234 080 3064 5528">+234 090 370 962 90</a>&nbsp&nbsp&nbsp
-                        <a href="tel:+234 080 3064 5528">+234 080 3064 5528</a> &nbsp&nbsp&nbsp
-                        <a href="mailto:rexsteroxy22@gmail.com">rexsteroxy22@gmail.com</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+    
     <!-- The header ends here -->
      
         <!-- The jumbo stars here -->

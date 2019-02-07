@@ -2,6 +2,7 @@
 class GpObject extends databaseObject{
 
 static public $table_name = "detail";
+ static public $detail_column = " ";
 static protected $db_column = ['id','matnumber', 'firstone', 'secondone',  'firsttwo',
 'secondtwo','firstthree','secondthree','firstfour','secondfour','firstfive','secondfive'];
 
@@ -36,5 +37,26 @@ static public function find_by_matnumber($matnumber){
     }
   
   }
+static public function insert_matnumber($courses){
+    $sql = "INSERT INTO " . static::$table_name ." ";
+    $sql .= "(matnumber)";
+    $sql .= "VALUE (";
+    $sql .= "'" . self::$database->escape_string($courses['matnumber']) . "'";
+    $sql .= ")";
+
+    $result = self::$database->query($sql);
+    return $result;
+}
+
+static public function edit_gp($courses,$matnumber){
+    $sql = "UPDATE ". static::$table_name ." SET ";
+    $sql .= static::$detail_column . 
+    self::$database->escape_string($courses['gp']). "' ";
+    $sql .= " WHERE matnumber='" . self::$database->escape_string($matnumber) . "' ";
+    $sql .= "LIMIT 1";
+    $result = self::$database->query($sql);
+    return $result;
+
+}
 }
 ?>

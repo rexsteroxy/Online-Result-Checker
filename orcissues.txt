@@ -12,3 +12,5 @@ Handle the error on Cumulative Gp which normally comes up
  THE NAN ERROR(ZERO RESULT ERROR);            
 
 4. fix session messages of delete and edit on Student and admin class.
+
+5. handle error which occurs when a student scores F through out.

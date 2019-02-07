@@ -233,15 +233,6 @@ static public function edit_grade($d_grade,$matnumber){
     return $result;
 
 }
-static public function edit_gp($details,$matnumber){
-    $sql = "UPDATE ". static::$table_name ." SET ";
-    $sql .= static::$detail_column ="'" . 
-    self::$database->escape_string($details['gp']). "' ";
-    $sql .= " WHERE matnumber='" . self::$database->escape_string($matnumber) . "' ";
-    $sql .= "LIMIT 1";
-    $result = self::$database->query($sql);
-    return $result;
 
-}
 }
 ?>

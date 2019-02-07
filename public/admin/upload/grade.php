@@ -95,8 +95,7 @@ $semester_s = $_POST['semester'] ?? "";
   <form  class="form-group" action="grade.php" method="POST">
   
   <span>Grade Point : </span>
-  <select name="gp" type="text" class="btn btn-outline-success mt-sm-2" 
-  value="<?php h(number_format($mgp, 2)) ; ?>">
+  <select name="gp" type="text" class="btn btn-outline-success mt-sm-2">
   <option><?php echo h(number_format($mgp, 2)) ; ?></option>
   </select></br>
   <select name="semester" type="text" class="btn btn-outline-success mt-sm-2">
