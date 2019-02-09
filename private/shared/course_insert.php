@@ -37,7 +37,7 @@ case "FirstSemester Year One":
         if(!isset($course->matnumber)){
             ResultObject::insert_matnumber($courses);
         }
-        Resultobject::edit_course($d_courses,$matnumber);
+        ResultObject::edit_course($d_courses,$matnumber);
         break;
 case "SecondSemester Year One":
   //checking to see wether table column matnumber is set
@@ -46,7 +46,7 @@ case "SecondSemester Year One":
         if(!isset($course->matnumber)){
             ResultObject::insert_matnumber($courses);
         }
-        Resultobject::edit_course($d_courses,$matnumber);
+        ResultObject::edit_course($d_courses,$matnumber);
         break;
 case "FirstSemester Year Two":
   //checking to see wether table column matnumber is set
@@ -55,7 +55,7 @@ case "FirstSemester Year Two":
   if(!isset($course->matnumber)){
       ResultObject::insert_matnumber($courses);
   }
-  Resultobject::edit_course($d_courses,$matnumber);
+  ResultObject::edit_course($d_courses,$matnumber);
   break;
 case "SecondSemester Year Two":
   //checking to see wether table column matnumber is set
@@ -64,7 +64,7 @@ case "SecondSemester Year Two":
         if(!isset($course->matnumber)){
             ResultObject::insert_matnumber($courses);
         }
-        Resultobject::edit_course($d_courses,$matnumber);
+        ResultObject::edit_course($d_courses,$matnumber);
         break;
 case "FirstSemester Year Three":
   //checking to see wether table column matnumber is set
@@ -73,7 +73,7 @@ case "FirstSemester Year Three":
   if(!isset($course->matnumber)){
       ResultObject::insert_matnumber($courses);
   }
-  Resultobject::edit_course($d_courses,$matnumber);
+  ResultObject::edit_course($d_courses,$matnumber);
   break;
 case "SecondSemester Year Three":
   //checking to see wether table column matnumber is set
@@ -82,7 +82,7 @@ case "SecondSemester Year Three":
   if(!isset($course->matnumber)){
       ResultObject::insert_matnumber($courses);
   }
-  Resultobject::edit_course($d_courses,$matnumber);
+  ResultObject::edit_course($d_courses,$matnumber);
   break;
 case "FirstSemester Year Four":
   //checking to see wether table column matnumber is set
@@ -91,7 +91,7 @@ case "FirstSemester Year Four":
   if(!isset($course->matnumber)){
       ResultObject::insert_matnumber($courses);
   }
-  Resultobject::edit_course($d_courses,$matnumber);
+  ResultObject::edit_course($d_courses,$matnumber);
   break;
 case "SecondSemester Year Four":
    //checking to see wether table column matnumber is set
@@ -100,7 +100,7 @@ case "SecondSemester Year Four":
   if(!isset($course->matnumber)){
       ResultObject::insert_matnumber($courses);
   }
-  Resultobject::edit_course($d_courses,$matnumber);
+  ResultObject::edit_course($d_courses,$matnumber);
   break;
 }
 ?>

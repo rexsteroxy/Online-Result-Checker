@@ -1,4 +1,4 @@
-<?php 
+<?php  
  $matnumber=$_POST['mat_number'];
  
 
