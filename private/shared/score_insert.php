@@ -59,6 +59,8 @@ case "SecondSemester Year Four":
     ResultObject::edit_score($d_score,$matnumber);
     break;
 
-}
+defualt:
+    header('location:' . 'stageone.php');
+        }
 
 ?>

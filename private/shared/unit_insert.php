@@ -59,6 +59,8 @@ case "SecondSemester Year Four":
     ResultObject::edit_unit($d_unit,$matnumber);
     break;
 
-}
+defualt:
+    header('location:' . 'stageone.php');
+        }
 
 ?>

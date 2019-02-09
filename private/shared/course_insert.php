@@ -102,5 +102,8 @@ case "SecondSemester Year Four":
   }
   ResultObject::edit_course($d_courses,$matnumber);
   break;
+
+defualt:
+header('location:' . 'stageone.php');
 }
 ?>

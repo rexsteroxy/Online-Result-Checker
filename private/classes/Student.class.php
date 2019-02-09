@@ -62,17 +62,9 @@ public function validate(){
     if($this->password_required) {
     if(is_blank($this->pass)) {
       $this->errors[] = "Password cannot be blank.";
-    } elseif (!has_length($this->pass, array('min' => 8))) {
-      $this->errors[] = "Password must contain  or more characters";
-    } elseif (!preg_match('/[A-Z]/', $this->pass)) {
-      $this->errors[] = "Password must contain at least 1 uppercase letter";
-    } elseif (!preg_match('/[a-z]/', $this->pass)) {
-      $this->errors[] = "Password must contain at least 1 lowercase letter";
-    } elseif (!preg_match('/[0-9]/', $this->pass)) {
-      $this->errors[] = "Password must contain at least 1 number";
-    } elseif (!preg_match('/[^A-Za-z0-9\s]/', $this->pass)) {
-      $this->errors[] = "Password must contain at least 1 symbol";
-    }
+    } elseif (!has_length($this->pass, array('min' => 5))) {
+      $this->errors[] = "Password must contain 5 or more characters";
+    } 
   
     if(is_blank($this->confirm_password)) {
       $this->errors[] = "Confirm password cannot be blank.";
