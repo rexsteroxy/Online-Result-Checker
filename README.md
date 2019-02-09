@@ -1,7 +1,7 @@
 # Online-Result-Checker
 A result software application for any university system.
 
-#The instruction on how to  set the app up on your localhost.
+# The instruction on how to  set the app up on your localhost.
 ### 1.Pull the repo on your specified folder with "Git Pull Origin master".(Using Git bash)
 ### 2.Go to your browser and type "http://localhost/phpmyadmin/"(XAMPP must be installed).
 ### 3.Create a Database called ORC.
