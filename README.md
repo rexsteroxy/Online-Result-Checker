@@ -21,7 +21,7 @@ A result software application for any university system.
  `define("DB_NAME", "ORC");`
 `?>`
 ### You are now good to go.
-###12.After Working Locally and you want to push your code back to the Online General Repo,make sure your replace the code in step 11. with this one.(VERY VERY NECESSARY).
+### 12.After Working Locally and you want to push your code back to the Online General Repo,make sure your replace the code in step 11. with this one.(VERY VERY NECESSARY).
 `<?php`
 ### //defining my db online testing
   `define("DB_SERVER", "db4free.net:3306");`
