@@ -15,16 +15,12 @@ include_once(SHARED_PATH .'/admin_header.php');
             <div class="card-header">
             <div class="card-subtitle">
             <h4 class="text-success text-center">Main Menu</h4>
-					<?php// if( $_SESSION['level']=="SuperAdmin"){?>
+					
 						<h4 class="text-success text-center"><a href="upload/index.php" >Upload Results</a></h4>
 						<h4 class="text-success text-center"><a href="staff/index.php" >View Administrators</a></h4>
 						<h4 class="text-success text-center"><a href="result/index.php" >View Results</a></h4>
 						<h4 class="text-success text-center"><a href="student/index.php" >View Students</a></h4>
-					<?php// } elseif($_SESSION['level']=="NormalAdmin"){ ?>
-						<!-- <h4 class="text-success text-center"><a href="upload/index.php" >Upload Results</a></h4>
-						<h4 class="text-success text-center"><a href="result/index.php" >View Results</a></h4>
-						<h4 class="text-success text-center"><a href="student/index.php" >View Students</a></h4> -->
-					<?php //} ?>
+					
     				
 				</div>
 		</div>
