@@ -1,5 +1,5 @@
 <?php
-class GpObject extends databaseObject{
+class GpObject extends DatabaseObject{
 
 static public $table_name = "detail";
  static public $detail_column = " ";

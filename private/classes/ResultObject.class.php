@@ -1,5 +1,5 @@
 <?php
-class ResultObject extends databaseObject{
+class ResultObject extends DatabaseObject{
 
 static public $table_name = "";
 static public $detail_column = "";

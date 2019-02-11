@@ -1,9 +1,9 @@
 <?php 
 Class Student extends DatabaseObject{
 //start of active record design patten
-
+ 
 static protected $table_name = "student";
-static protected $db_column = ['id','name', 'email', 'institution',
+static protected $db_column = ['id', 'name', 'email', 'institution',
                                'department', 'matnumber', 'year',  'password'];
 
 //End of active record desing pattern
