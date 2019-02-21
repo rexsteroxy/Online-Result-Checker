@@ -12,21 +12,10 @@ A result software application for any university system.
 ### 8.Scroll down and click on GO option at the phpmyadmin.
 ### 9.Wait for the importation to  complete.
 ### 10.Go to your repository folder and locate Private/db_credentials.php
-### 11.Replace the code there with these one.
-`<?php`
-### //defining my db credentials for local testing 
- `define("DB_SERVER", "localhost");`
- `define("DB_USER", "root");`
- `define("DB_PASSWORD", "");`
- `define("DB_NAME", "ORC");`
-`?>`
+### 11.Un-comment the codes under:.
+ ## //defining my db credentials for local testing 
 ### You are now good to go.
-### 12.After Working Locally and you want to push your code back to the Online General Repo,make sure your replace the code in step 11. with this one.(VERY VERY NECESSARY).
-`<?php`
-### //defining my db online testing
-  `define("DB_SERVER", "db4free.net:3306");`
-  `define("DB_USER", "rexsteroxy");`
-  `define("DB_PASSWORD", "amadiaustin.77");`
-  `define("DB_NAME", "rexsteroxy");`
-  `?>`
+### 12.After Working Locally and you want to push your code back to the Online General Repo,make sure you comment back the local db credentials and Un-comment the codes under:
+ ## //defining my db online testing. (VERY VERY NECESSARY).
+ 
 ### ALWAYS REMEMBER TO PULL BEFORE YOU PUSH SO AS TO AVOID CONFLICTS.
